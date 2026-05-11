@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Primary Meta -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <meta name="title" content="MRCL AI - WhatsApp Bot" />
+        <meta
+            name="description"
+            content="MRCL AI is a free WhatsApp bot with artificial intelligence, stickers, social media downloader, confess feature, automation tools, and many more powerful features."
+        />
+        <meta
+            name="keywords"
+            content="MRCL AI, WhatsApp Bot, AI Bot, WhatsApp Automation, Sticker Bot, Downloader Bot, Artificial Intelligence, Menfess Bot, Confess Bot, Free WhatsApp Bot"
+        />
+        <meta name="author" content="Mrchlldev" />
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="src/image/favicon.png" />
+
+        <!-- Open Graph -->
+        <meta property="og:title" content="MRCL AI - WhatsApp Bot" />
+        <meta
+            property="og:description"
+            content="A free WhatsApp bot powered with AI, downloader, stickers, automation, and more."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="src/image/banner.png" />
+
+        <!-- Theme Color -->
+        <meta name="theme-color" content="#0d1117" />
+        <title>MRCL AI - WhatsApp Bot</title>
+
+        <!-- Bootstrap CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+
+        <!-- Bootstrap Icons -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+            rel="stylesheet"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet"
+        />
+
+        <style>
+            body {
+                background: #0d1117;
+                color: white;
+                font-family: "Poppins", sans-serif;
+                scroll-behavior: smooth;
+            }
+
+            .navbar {
+                background: rgba(13, 17, 23, 0.9);
+                backdrop-filter: blur(10px);
+            }
+
+            .navbar-brand {
+                font-weight: bold;
+                letter-spacing: 1px;
+            }
+
+            .hero {
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                text-align: center;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .hero h1 {
+                font-size: 70px;
+                font-weight: 800;
+            }
+
+            .hero p {
+                color: #c9d1d9;
+                font-size: 20px;
+            }
+
+            .slider-wrapper {
+                overflow: hidden;
+                width: 100%;
+                margin-top: 50px;
+            }
+
+            .slider-track {
+                display: flex;
+                width: max-content;
+                animation: slide 15s linear infinite;
+                gap: 20px;
+            }
+
+            .thumb-box {
+                width: 240px;
+                height: 140px;
+                border-radius: 20px;
+                background: linear-gradient(135deg, #3b82f6, #60a5fa);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 35px;
+                font-weight: bold;
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+                flex-shrink: 0;
+            }
+            .thumb-box img {
+                width: 100%;
+                height: 100%;
+                border-radius: 5px;
+
+                object-fit: cover;
+                display: block;
+            }
+
+            @keyframes slide {
+                from {
+                    transform: translateX(0);
+                }
+                to {
+                    transform: translateX(-50%);
+                }
+            }
+
+            section {
+                padding: 100px 0;
+            }
+
+            .section-title {
+                font-size: 40px;
+                font-weight: bold;
+                margin-bottom: 40px;
+                text-align: center;
+            }
+
+            .feature-card {
+                background: #161b22;
+                border: 1px solid #30363d;
+                border-radius: 20px;
+                padding: 30px;
+                transition: 0.3s;
+                height: 100%;
+            }
+
+            .feature-card:hover {
+                transform: translateY(-5px);
+                border-color: #58a6ff;
+            }
+
+            .feature-card i {
+                font-size: 40px;
+                color: #58a6ff;
+                margin-bottom: 15px;
+            }
+
+            .screenshot-card {
+                background: #161b22;
+                border-radius: 20px;
+                overflow: hidden;
+                border: 1px solid #30363d;
+                transition: 0.3s;
+            }
+
+            .screenshot-card:hover {
+                transform: scale(1.03);
+            }
+
+            .screenshot-image {
+                height: 460px;
+                background: linear-gradient(135deg, #1f6feb, #58a6ff);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 60px;
+            }
+
+            .screenshot-image img {
+                width: 100%;
+                height: 100%;
+                border-radius: 5px;
+
+                object-fit: cover;
+                display: block;
+            }
+
+            footer {
+                border-top: 1px solid #30363d;
+                padding: 30px 0;
+                text-align: center;
+                color: #8b949e;
+            }
+
+            .contact-box {
+                background: #161b22;
+                padding: 40px;
+                border-radius: 20px;
+                border: 1px solid #30363d;
+                text-align: center;
+            }
+
+            .contact-box h3 {
+                font-weight: bold;
+            }
+
+            @media (max-width: 768px) {
+                .hero h1 {
+                    font-size: 45px;
+                }
+
+                .thumb-box {
+                    width: 380px;
+                    height: 260px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">MRCL AI</a>
+
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#feature">Feature</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#screenshot"
+                                >Screenshot</a
+                            >
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Get in Touch</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <section class="hero">
+            <div class="container">
+                <div class="slider-wrapper">
+                    <div class="slider-track">
+                        <div class="thumb-box">
+                            <img src="src/image/slider1.png" />
+                        </div>
+                        <div class="thumb-box">
+                            <img src="src/image/slider1.png" />
+                        </div>
+                        <div class="thumb-box">
+                            <img src="src/image/slider1.png" />
+                        </div>
+                        <div class="thumb-box">
+                            <img src="src/image/slider1.png" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-5">
+                    <h1>MRCL AI</h1>
+                    <p>A WhatsApp Bot Free for Use.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section id="about">
+            <div class="container">
+                <h2 class="section-title">About</h2>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <p class="text-secondary fs-5">
+                            <b>MRCL AI</b> is a WhatsApp bot developed by
+                            <b>Marcellino Ferdian Abimanyu</b> to assist with
+                            and simplify daily tasks. <b>MRCL AI</b> can also be
+                            rented for WhatsApp groups so that everyone in the
+                            group can use it. Type <b>.hargasewa</b> for rental
+                            instructions!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature -->
+        <section id="feature">
+            <div class="container">
+                <h2 class="section-title">Feature</h2>
+
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="feature-card">
+                            <i class="bi bi-robot"></i>
+                            <h4>Artificial Intelligence</h4>
+                            <p class="text-secondary">
+                                Smart AI features for chatting, answering, and
+                                automation.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="feature-card">
+                            <i class="bi bi-image"></i>
+                            <h4>Canvas & Sticker</h4>
+                            <p class="text-secondary">
+                                Generate images, stickers, and creative media
+                                instantly.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="feature-card">
+                            <i class="bi bi-download"></i>
+                            <h4>Socmed Downloader</h4>
+                            <p class="text-secondary">
+                                Download videos and media from social media
+                                platforms.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="feature-card">
+                            <i class="bi bi-chat-heart"></i>
+                            <h4>Confess & Menfess</h4>
+                            <p class="text-secondary">
+                                Anonymous message and confess feature for users.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="feature-card">
+                            <i class="bi bi-stars"></i>
+                            <h4>And More...</h4>
+                            <p class="text-secondary">
+                                Many more exciting features available inside
+                                MRCL AI.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Screenshot -->
+        <section id="screenshot">
+            <div class="container">
+                <h2 class="section-title">Screenshot</h2>
+
+                <div class="row g-4">
+                    <div class="col-md-3">
+                        <div class="screenshot-card">
+                            <div class="screenshot-image">
+                                <img src="src/image/screenshot1.png" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="screenshot-card">
+                            <div class="screenshot-image">
+                                <img src="src/image/screenshot2.png" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="screenshot-card">
+                            <div class="screenshot-image">
+                                <img src="src/image/screenshot3.png" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="screenshot-card">
+                            <div class="screenshot-image">
+                                <img src="src/image/screenshot4.png" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact">
+            <div class="container">
+                <h2 class="section-title">Get in Touch</h2>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="contact-box">
+                            <h3>MRCL AI</h3>
+                            <p class="text-secondary mb-1">WhatsApp Bot</p>
+
+                            <div class="mt-4">
+                                <a
+                                    href="https://wa.me/+6281232028178?text=.menu"
+                                    class="btn btn-primary rounded-pill px-4"
+                                >
+                                    Contact Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="contact-box">
+                            <h3>Marcellino F.A</h3>
+                            <p class="text-secondary mb-1">
+                                Owner <b>MRCL AI</b>
+                            </p>
+
+                            <div class="mt-4">
+                                <a
+                                    href="https://wa.me/+6281381685954"
+                                    class="btn btn-primary rounded-pill px-4"
+                                >
+                                    Contact Now
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>© 2026 MRCL AI. by Mrchlldev</footer>
+
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
